@@ -19,7 +19,7 @@ if [ ${TOOL} = "NFS" ];then
             mount -o nolock -t nfs 193.169.4.2:/home_b/nfsroot/zjqi ${NFS_MY_PATH}/
         fi
     
-        cp ${SENSOR}.bin ${NFS_MY_PATH}/ -vf                                       
+        cp ${SENSOR}.bin ${NFS_MY_PATH}/bin -vf                                       
 
     elif [ -d "${NFS_WORK_PATH}" ];then
         if mountpoint -q ${NFS_WORK_PATH};then
@@ -29,7 +29,7 @@ if [ ${TOOL} = "NFS" ];then
             mount -o nolock -t nfs 193.169.4.2:/home_b/nfsroot/zjqi ${NFS_WORK_PATH}/
         fi
 
-        cp ${SENSOR}.bin ${NFS_WORK_PATH}/ -vf                                                                                                   
+        cp ${SENSOR}.bin ${NFS_WORK_PATH}/bin -vf                                                                                                   
     fi
 
 elif [ ${TOOL} = "TFTP" ];then
